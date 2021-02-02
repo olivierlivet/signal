@@ -1,4 +1,5 @@
 import React,{ Component, useState } from 'react';
+import Helmet from 'react-helmet'
 import {
   ChakraProvider,
   Box,
@@ -32,6 +33,9 @@ function App() {
         justify='center'
         wrap='nowrap'
       >
+        <Helmet>
+          <title>Signap Group GMBH ©®</title>
+        </Helmet>
 
         <SwipeableViews
           index={ index }
@@ -80,11 +84,16 @@ function App() {
         display={{ base: 'none', lg:'flex'}}
 
       >
-        <Button colorScheme="red" onClick={()=>{setIndex(index - 1) }}>
-            Prev
+        <Button
+          visibility={index === 0 ? 'hidden' : 'initial'}
+          colorScheme="red" onClick={()=>{setIndex(index - 1) }}>
+            { index === 1 ? 'Équipe' : 'Home' }
         </Button>
-        <Button colorScheme="red" onClick={()=>{setIndex(index + 1) }}>
-            Next
+        <Button
+          visibility={index === 2 ? 'hidden' : 'initial'}
+          colorScheme="red" onClick={()=>{setIndex(index + 1) }}>
+                        { index === 1 ? 'Projets' : 'Home' }
+
         </Button>
       </Flex>
     </ChakraProvider>

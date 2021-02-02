@@ -11,6 +11,7 @@ const Projects = () => (
         p={ '2rem' }
         maxH='100vh'
         overflow='scroll'
+        minH='100vh'
     >
         <Box
             mx='auto'
