@@ -45,6 +45,7 @@ function App() {
         autoPlay
         loop
         muted
+        playsinline
         src='./going-public-launch.mp4'
 
         w='100vw'
