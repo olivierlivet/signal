@@ -23,7 +23,14 @@ import Home from './Components/home'
 import Team from './Components/team'
 import Projects from './Components/projects'
 
+import ReactGA from 'react-ga';
+
+
 function App() {
+
+
+  ReactGA.initialize('UA-174676528-2');
+  ReactGA.pageview(window.location.pathname + window.location.search);
 
   const [ index, setIndex ] = useState(1)
   return (
@@ -36,7 +43,7 @@ function App() {
       >
         <Helmet>
           <title>going public</title>
-          <meta name="description" value="cabinet de conseil en stratégie numérique et communication" />
+          <meta name="description" content="cabinet de conseil en stratégie numérique et communication" />
         </Helmet>
 
         
