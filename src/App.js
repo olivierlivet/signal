@@ -48,6 +48,17 @@ function App() {
         playsInline
         src='./going-public-launch.mp4'
 
+        position='absolute'
+        top='0'
+        bottom='0'
+        left='0'
+        right='0'
+
+        objectFit='cover'
+
+        minW='100%'
+        minH='100%'
+
         w='100vw'
         h='100vh'
       />
