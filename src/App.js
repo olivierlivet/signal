@@ -35,18 +35,19 @@ function App() {
         bg='black'
       >
         <Helmet>
-          <title>Going public ©®</title>
+          <title>going public</title>
+          <meta name="description" value="cabinet de conseil en stratégie numérique et communication" />
         </Helmet>
 
         
 
-       <Box
+        <Box
         as='video'
         autoPlay
         loop
         muted
         playsInline
-        src='./going-public-launch.mp4'
+        src='./video-portrait.mp4'
 
         position='absolute'
         top='0'
@@ -61,6 +62,33 @@ function App() {
 
         w='100vw'
         h='100vh'
+
+        display={{ base:'block', lg:'none' }}
+      />
+
+       <Box
+        as='video'
+        autoPlay
+        loop
+        muted
+        playsInline
+        src='./video-landscape.mp4'
+
+        position='absolute'
+        top='0'
+        bottom='0'
+        left='0'
+        right='0'
+
+        objectFit='cover'
+
+        minW='100%'
+        minH='100%'
+
+        w='100vw'
+        h='100vh'
+
+        display={{ base:'none', lg:'block' }}
       />
 
       </Flex>
